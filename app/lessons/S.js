@@ -2,10 +2,17 @@ import React from 'react'
 import { StyleSheet } from 'react-native'
 
 const S = StyleSheet.create({
-  cont: {},
+  screenHeader: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'grey',
+    marginBottom: 2,
+  },
+  screenTitle: {
+    fontSize: 26,
+  },
   block: {
     margin: 3,
-    width: '48%',
+    width: '95%',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'black',
@@ -14,10 +21,18 @@ const S = StyleSheet.create({
     padding: 5,
     backgroundColor: '#fff',
     elevation: 10,
+    alignSelf: 'center',
+  },
+  firstTitle: {
+    fontSize: 28,
+    alignSelf: 'center',
   },
   like: {
     borderTopColor: 'grey',
     borderTopWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 5,
   },
   lesson: {
     padding: 0,
@@ -32,6 +47,7 @@ const S = StyleSheet.create({
   view: {
     padding: 10,
   },
+  text: { fontSize: 18 },
   h1: {
     fontWeight: 'bold',
     fontSize: 28,

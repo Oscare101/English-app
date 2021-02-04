@@ -8,13 +8,11 @@ const TabBar = ({ state, navigation }) => {
   const { routes } = state
 
   const renderColor = (currentTab) =>
-    currentTab === selected ? 'red' : 'black'
+    currentTab === selected ? '#589C00' : 'black'
 
   const handlerPress = (activeTab, index) => {
-    if (state.index !== index) {
-      setSelected(activeTab)
-      navigation.navigate(activeTab)
-    }
+    setSelected(activeTab)
+    navigation.navigate(activeTab)
   }
 
   return (
@@ -37,7 +35,7 @@ const TabBar = ({ state, navigation }) => {
 const styles = StyleSheet.create({
   wrapper: {
     position: 'absolute',
-    bottom: 20,
+    bottom: 10,
     width,
     alignItems: 'center',
     justifyContent: 'center',
@@ -46,7 +44,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: '#fff',
-    width: 250,
+    width: '85%',
     borderRadius: 100,
 
     elevation: 10, // only for android

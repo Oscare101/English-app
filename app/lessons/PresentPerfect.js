@@ -14,16 +14,38 @@ const Lesson = () => {
   return (
     <View style={S.lesson}>
       <View style={S.header}>
-        <Text style={S.headerTitle}>Strong adjectives</Text>
+        <Text style={S.headerTitle}>Lesson 1</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
-        <Text style={S.h2}>Very</Text>
+        <Text style={S.h2}>
+          sgvzwexrcdtfvgybuhnjimko,omjiunhygerbwetWhether the drawer should stay
+          open by default. When this is true, the drawer will be open from the
+          initial render. It can be closed normally using gestures or
+          programmatically. However, when going back, drawer will re-open if it
+          was closed. This essentially reverses the behavior of the drawer where
+          the closed state is the default state.Whether the drawer should stay
+          open by default. When this is true, the drawer will be open from the
+          initial render. It can be closed normally using gestures or
+          programmatically. However, when going back, drawer will re-open if it
+          was closed. This essentially reverses the behavior of the drawer where
+          the closed state is the default state.Whether the drawer should stay
+          open by default. When this is true, the drawer will be open from the
+          initial render. It can be closed normally using gestures or
+          programmatically. However, when going back, drawer will re-open if it
+          was closed. This essentially reverses the behavior of the drawer where
+          the closed state is the default state.Whether the drawer should stay
+          open by default. When this is true, the drawer will be open from the
+          initial render. It can be closed normally using gestures or
+          programmatically. However, when going back, drawer will re-open if it
+          was closed. This essentially reverses the behavior of the drawer where
+          the closed state is the default state.gw
+        </Text>
       </ScrollView>
     </View>
   )
 }
 
-const Very = () => {
+const PresentPerfect = () => {
   const [modalVisible, setModalVisible] = useState(false)
   const [like, setLike] = useState(false)
   const [repeat, setRepeat] = useState(false)
@@ -52,7 +74,7 @@ const Very = () => {
       </Modal>
       <View style={S.block}>
         <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
-          <Text style={S.firstTitle}>Strong adjectives</Text>
+          <Text style={S.firstTitle}>Present Perfect</Text>
         </TouchableOpacity>
         <View style={S.like}>
           <TouchableOpacity onPress={() => setLike(!like)}>
@@ -83,4 +105,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default Very
+export default PresentPerfect
