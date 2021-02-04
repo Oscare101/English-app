@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import Tab from './Tab'
+import color from './color'
 const { width } = Dimensions.get('screen')
 
 const TabBar = ({ state, navigation }) => {
@@ -8,7 +9,7 @@ const TabBar = ({ state, navigation }) => {
   const { routes } = state
 
   const renderColor = (currentTab) =>
-    currentTab === selected ? '#589C00' : 'black'
+    currentTab === selected ? color.bottomNavActive : color.bottomNavWait
 
   const handlerPress = (activeTab, index) => {
     setSelected(activeTab)
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     width: '85%',
     borderRadius: 100,
-
+    alignSelf: 'center',
     elevation: 10, // only for android
   },
 })

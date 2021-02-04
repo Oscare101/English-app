@@ -12,12 +12,12 @@ import S from './S'
 
 const Lesson = () => {
   return (
-    <View style={S.lesson}>
+    <View style={[S.lesson, S.colorBg]}>
       <View style={S.header}>
         <Text style={S.headerTitle}>Strong adjectives</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
-        <Text style={S.h2}>Very</Text>
+        <Text style={S.h2}>Strong adjectives</Text>
       </ScrollView>
     </View>
   )
@@ -45,7 +45,7 @@ const Very = () => {
         <Lesson />
         <TouchableOpacity
           onPress={() => setModalVisible(!modalVisible)}
-          style={styles.close}
+          style={S.close}
         >
           <Ionicons name="close-outline" size={40} color={'black'} />
         </TouchableOpacity>
@@ -75,11 +75,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderBottomWidth: 2,
     padding: 20,
-  },
-  close: {
-    position: 'absolute',
-    top: 20,
-    right: 20,
   },
 })
 

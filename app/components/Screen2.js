@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native'
 import Header from './Header'
 import S from '../lessons/S'
+import color from './color'
 const { width } = Dimensions.get('screen')
 const Screen2 = () => {
   return (
@@ -16,12 +17,11 @@ const Screen2 = () => {
 
 const styles = StyleSheet.create({
   View: {
-    paddingTop: 30,
     flex: 1,
     width,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'yellowgreen',
+    backgroundColor: color.backgroundColor,
     flexDirection: 'column',
   },
 })

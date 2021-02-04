@@ -12,7 +12,7 @@ import S from './S'
 
 const Lesson = () => {
   return (
-    <View style={S.lesson}>
+    <View style={[S.lesson, S.colorBg]}>
       <View style={S.header}>
         <Text style={S.headerTitle}>Lesson 1</Text>
       </View>
@@ -67,7 +67,7 @@ const PresentPerfectContinuous = () => {
         <Lesson />
         <TouchableOpacity
           onPress={() => setModalVisible(!modalVisible)}
-          style={styles.close}
+          style={S.close}
         >
           <Ionicons name="close-outline" size={40} color={'black'} />
         </TouchableOpacity>
@@ -97,11 +97,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderBottomWidth: 2,
     padding: 20,
-  },
-  close: {
-    position: 'absolute',
-    top: 20,
-    right: 20,
   },
 })
 
