@@ -1,10 +1,11 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import Contact from '../settings/Contact'
 
 const Screen3 = () => {
   return (
     <View style={styles.View}>
-      <Text>Create</Text>
+      <Contact />
     </View>
   )
 }

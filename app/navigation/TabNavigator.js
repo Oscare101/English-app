@@ -20,9 +20,9 @@ const TabNavigator = () => {
         initialParams={{ icon: 'school-outline' }}
       />
       <Tab.Screen
-        name="Profile"
+        name="Settings"
         component={Screen3}
-        initialParams={{ icon: 'person-outline' }}
+        initialParams={{ icon: 'settings-outline' }}
       />
     </Tab.Navigator>
   )
