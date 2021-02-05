@@ -10,7 +10,7 @@ const TabNavigator = () => {
   return (
     <Tab.Navigator tabBar={(props) => <TabBar {...props} />}>
       <Tab.Screen
-        name="Book"
+        name="Theory"
         component={Screen1}
         initialParams={{ icon: 'book-outline' }}
       />
@@ -20,7 +20,7 @@ const TabNavigator = () => {
         initialParams={{ icon: 'school-outline' }}
       />
       <Tab.Screen
-        name="Settings"
+        name="More"
         component={Screen3}
         initialParams={{ icon: 'settings-outline' }}
       />

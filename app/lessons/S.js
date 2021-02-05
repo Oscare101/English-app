@@ -141,6 +141,16 @@ const S = StyleSheet.create({
     fontSize: 18,
     color: color.hintText,
   },
+  a: {
+    backgroundColor: color.attentionBlock,
+    borderRadius: 10,
+    padding: 10,
+    margin: 3,
+  },
+  at: {
+    fontSize: 18,
+    color: color.attentionText,
+  },
   b: { fontWeight: 'bold' },
   i: { fontStyle: 'italic' },
   close: {

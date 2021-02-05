@@ -9,6 +9,8 @@ const color = {
   warningText: '#6E0000',
   hintBlock: '#CEF1FF',
   hintText: '#0075A4',
+  attentionBlock: '#FFF7A0',
+  attentionText: '#A7770D',
 }
 
 export default color

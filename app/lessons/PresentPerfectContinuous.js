@@ -52,6 +52,29 @@ const Lesson = () => {
             her feet hurt).
           </Text>
         </View>
+        <Text style={S.text}>
+          &bull; to express anger, irritation or annoyance
+        </Text>
+        <View style={S.c}>
+          <Text style={S.ct}>
+            Somebody <Text style={S.b}>has been giving away</Text> our plans.{' '}
+            {'\n'}(The speaker is irritated).
+          </Text>
+        </View>
+        <Text style={S.text}>
+          <Text style={S.b}>Note:</Text> {'\n'}With the verb{' '}
+          <Text style={S.i}>
+            live, work, teach, feel (=have a particular emotion) we can use the
+            present perfect or present perfecr continuous with no difference in
+            meaning
+          </Text>
+        </Text>
+        <View style={S.a}>
+          <Text style={S.at}>
+            We <Text style={S.b}>have lived/have been living</Text> here for
+            ywenty years
+          </Text>
+        </View>
         <View style={{ padding: 10 }}></View>
       </ScrollView>
     </View>
