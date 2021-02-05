@@ -1,8 +1,17 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import color from '../components/color'
-import * as Font from 'expo-font'
+
+const { width } = Dimensions.get('screen')
 const S = StyleSheet.create({
+  View: {
+    flex: 1,
+    width,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: color.backgroundColor,
+    flexDirection: 'column',
+  },
   screenHeader: {
     // borderBottomWidth: 1,
     // borderBottomColor: 'grey',
@@ -23,7 +32,7 @@ const S = StyleSheet.create({
   },
   block: {
     margin: 3,
-    width: '95%',
+    width: width * 0.48,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'black',
@@ -35,8 +44,23 @@ const S = StyleSheet.create({
     alignSelf: 'center',
   },
   firstTitle: {
-    fontSize: 28,
+    fontSize: 20,
     alignSelf: 'center',
+    textAlign: 'center',
+  },
+  blockList: {
+    paddingBottom: 65,
+    flex: 1,
+    width,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  blockLesson: {
+    height: 50,
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   like: {
     borderTopColor: 'grey',
@@ -126,6 +150,25 @@ const S = StyleSheet.create({
     textShadowColor: 'black',
     textShadowRadius: 5,
     textShadowOffset: { width: 1, height: 1 },
+  },
+  share: {
+    backgroundColor: color.backgroundColor,
+    alignItems: 'center',
+    height: 30,
+    justifyContent: 'center',
+    borderRadius: 10,
+    margin: 10,
+    borderColor: color.bottomNavActive,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    padding: 20,
+  },
+  shareText: {
+    fontSize: 26,
+    letterSpacing: 5,
+  },
+  settings: {
+    width: width * 0.97,
   },
 })
 

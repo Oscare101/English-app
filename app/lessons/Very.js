@@ -10,6 +10,41 @@ import {
 import { Ionicons } from '@expo/vector-icons'
 import S from './S'
 
+const listAdj = {
+  good: 'superb',
+  bad: 'harrowing',
+  rude: 'vulgar',
+  boring: 'dull, redious',
+  short: 'brief',
+  big: 'huge, enormous',
+  cold: 'freezing',
+  hot: 'scalding (liquids), scorching (heat)',
+  angry: 'furious',
+  funny: 'hilarious',
+  hungry: 'ravenous, starving',
+  slow: 'sluggish',
+  fast: 'rapid',
+  tired: 'exhausted',
+  poor: 'destitute',
+  rich: 'wealthy',
+  happy: 'jubilant, delighted, thrilled',
+  worried: 'anxious',
+  thirsty: 'parched',
+  dirty: 'squalid',
+  clean: 'spotless',
+  scary: 'intimidating',
+}
+
+const VeryList = () => {
+  {
+    return Object.keys(listAdj).map((list) => (
+      <Text key={list} style={[S.text, { fontSize: 22 }]}>
+        {list} &rarr; {listAdj[list]}
+      </Text>
+    ))
+  }
+}
+
 const Lesson = () => {
   return (
     <View style={[S.lesson, S.colorBg]}>
@@ -17,7 +52,27 @@ const Lesson = () => {
         <Text style={S.headerTitle}>Strong adjectives</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
-        <Text style={S.h2}>Strong adjectives</Text>
+        <Text style={S.text}>
+          In English, adjectives are divided into{' '}
+          <Text style={S.i}>base adjectives</Text> and{' '}
+          <Text style={S.i}>strong </Text>
+          (extreme) adjectives. The first ones are neutral words, the second
+          ones have a strong emotional connotation.
+        </Text>
+
+        <VeryList />
+        {/* <View
+          style={{
+            flexDirection: 'row',
+            display: 'flex',
+            justifyContent: 'space-evenly',
+          }}
+        >
+          <Text style={S.text}>Good</Text>
+          <Text style={S.text}>&rarr;</Text>
+          <Text style={S.text}>Superb</Text>
+        </View> */}
+        <View style={{ padding: 10 }}></View>
       </ScrollView>
     </View>
   )
@@ -47,11 +102,14 @@ const Very = () => {
           onPress={() => setModalVisible(!modalVisible)}
           style={S.close}
         >
-          <Ionicons name="close-outline" size={40} color={'black'} />
+          <Ionicons name="close-outline" size={40} color={'white'} />
         </TouchableOpacity>
       </Modal>
       <View style={S.block}>
-        <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
+        <TouchableOpacity
+          onPress={() => setModalVisible(!modalVisible)}
+          style={S.blockLesson}
+        >
           <Text style={S.firstTitle}>Strong adjectives</Text>
         </TouchableOpacity>
         <View style={S.like}>

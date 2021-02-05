@@ -1,6 +1,6 @@
 const color = {
-  backgroundColor: '#4BD30C',
-  headerLessonColor: '#38B100',
+  backgroundColor: '#62EA92',
+  headerLessonColor: '#51C97B',
   commentBlock: '#D5FFD6',
   commentText: '#2E6343',
   bottomNavActive: '#076409',

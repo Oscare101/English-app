@@ -6,22 +6,23 @@ import {
   TouchableOpacity,
   Linking,
   Modal,
+  ScrollView,
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import S from '../lessons/S'
 const Lesson = () => {
   return (
-    <View styke={styles.View}>
+    <View style={[S.lesson, S.colorBg]}>
       <View style={S.header}>
         <Text style={S.headerTitle}>Sources</Text>
       </View>
-      <View style={S.view}>
+      <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
         <Text style={S.text}>
           &bull; Grammarway - Jenny Dooley, Virginia Evans {'\n'}
           &bull; Oxford Practice Grammar Advanced - George Yule {'\n'}
           &bull; English File - Christian Latham-Koening
         </Text>
-      </View>
+      </ScrollView>
     </View>
   )
 }
@@ -35,14 +36,16 @@ const Sources = () => {
         <Lesson />
         <TouchableOpacity
           onPress={() => setModalVisible(!modalVisible)}
-          style={styles.close}
+          style={S.close}
         >
-          <Ionicons name="close-outline" size={40} color={'black'} />
+          <Ionicons name="close-outline" size={40} color={'white'} />
         </TouchableOpacity>
       </Modal>
-      <View style={S.block}>
+      <View style={[S.block, S.settings]}>
         <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
-          <Text style={S.firstTitle}>Sources</Text>
+          <Text style={S.firstTitle}>
+            Sources <Ionicons name="library-outline" size={20} />
+          </Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -50,23 +53,12 @@ const Sources = () => {
 }
 
 const styles = StyleSheet.create({
-  View: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-  },
   link: {
     paddingVertical: 20,
     flexDirection: 'row',
     width: '90%',
     alignSelf: 'center',
     justifyContent: 'space-around',
-  },
-  close: {
-    position: 'absolute',
-    top: 20,
-    right: 20,
   },
 })
 

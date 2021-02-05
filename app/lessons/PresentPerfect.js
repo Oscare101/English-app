@@ -91,6 +91,7 @@ const Lesson = () => {
             <Text style={S.b}>caught</Text> him.
           </Text>
         </View>
+        <View style={{ padding: 10 }}></View>
       </ScrollView>
     </View>
   )
@@ -124,7 +125,10 @@ const PresentPerfect = () => {
         </TouchableOpacity>
       </Modal>
       <View style={S.block}>
-        <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
+        <TouchableOpacity
+          onPress={() => setModalVisible(!modalVisible)}
+          style={S.blockLesson}
+        >
           <Text style={S.firstTitle}>Present Perfect</Text>
         </TouchableOpacity>
         <View style={S.like}>
