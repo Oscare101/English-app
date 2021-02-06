@@ -9,70 +9,72 @@ import {
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import S from './S'
-
 const Lesson = () => {
   return (
     <View style={[S.lesson, S.colorBg]}>
       <View style={S.header}>
-        <Text style={S.headerTitle}>Present Perfect Continuous</Text>
+        <Text style={S.headerTitle}>Present Continuous</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
-        <Text style={S.h3}>have/has + been + present participle</Text>
+        <Text style={S.h3}>am/is/are + present pariciple</Text>
         <View style={S.h}>
           <Text style={S.ht}>
-            The present perfect continuous is used with the following time
-            expression: {'\n'}
+            The present continuous is used with the following time expression:{' '}
+            {'\n'}
             <Text style={S.i}>
-              for, since, already,yet, always, just, ever, never, so far, today,
-              this week, how long, lately, recently, still (in negations).
+              {' '}
+              now, at the moment, at present, these days, still, nowadays,
+              today, tonight, etc.
             </Text>
           </Text>
         </View>
-        <Text style={S.h2}>We use the present perfect continuous:</Text>
+
+        <Text style={S.h2}>We use the present continuous:</Text>
         <Text style={S.text}>
-          &bull; to put emphasis on the duration of an action which started in
-          the past and continues up to the present
+          &bull; for actions taking place now, at the moment of speaking
         </Text>
         <View style={S.c}>
           <Text style={S.ct}>
-            Sam <Text style={S.b}>has been talking</Text> the phone{' '}
-            <Text style={S.b}>for</Text> half an hour.{'\n'}(He began talking o
-            the phone half an hour ago and he is still talking).
+            He <Text style={S.b}>is giving</Text> the baby beth at the moment
           </Text>
         </View>
         <Text style={S.text}>
-          &bull; for an action which started in the past and lastest for some
-          time. The action may have finished or may still be going on. The
-          result of the action is visible in the present.
+          &bull; for temporary action; that is actions that are going on around
+          now, but not at theactual moment of speaking
         </Text>
         <View style={S.c}>
           <Text style={S.ct}>
-            Her feet hurt. She <Text style={S.b}>has been walking</Text> all
-            morning. {'\n'}(The result of the action is visible in the present -
-            her feet hurt).
+            I <Text style={S.b}>am looking for</Text> a new job these days.{' '}
+            {'\n'}(He is not looking for a job at the moment of speaking)
           </Text>
         </View>
         <Text style={S.text}>
-          &bull; to express anger, irritation or annoyance
+          &bull; with adverbs such as: always, constantly, continually, etc. fro
+          actions which happen very often, usually to axpress annoyance,
+          irritation or anger
         </Text>
         <View style={S.c}>
           <Text style={S.ct}>
-            Somebody <Text style={S.b}>has been giving away</Text> our plans.{' '}
-            {'\n'}(The speaker is irritated).
+            I <Text style={S.b}>am always meeting</Text> Sara when I go to
+            shopping. {'\n'}(action which happens very often) You{' '}
+            <Text style={S.b}>are constantly interrupting</Text> me when I am
+            talking. {'\n'}(expressing annoyance/irritation)
           </Text>
         </View>
         <Text style={S.text}>
-          <Text style={S.b}>Note:</Text> {'\n'}With the verb{' '}
-          <Text style={S.i}>
-            live, work, teach, feel (=have a particular emotion) we can use the
-            present perfect or present perfecr continuous with no difference in
-            meaning
-          </Text>
+          &bull; fo an action that we have already arranged to do in the near
+          future, especially when h=the time and place have been decided
         </Text>
-        <View style={S.a}>
-          <Text style={S.at}>
-            We <Text style={S.b}>have lived/have been living</Text> here for
-            ywenty years
+        <View style={S.c}>
+          <Text style={S.ct}>
+            They <Text style={S.b}>are moving</Text> into their new house newt
+            week {'\n'}(The time has been decided)
+          </Text>
+        </View>
+        <Text style={S.text}>&bull; for changing or developing situation.</Text>
+        <View style={S.c}>
+          <Text style={S.ct}>
+            More and more specoes <Text style={S.b}>are becoming</Text> extinct.
           </Text>
         </View>
         <View style={{ padding: 10 }}></View>
@@ -81,7 +83,7 @@ const Lesson = () => {
   )
 }
 
-const PresentPerfectContinuous = () => {
+const PresentContinuous = () => {
   const [modalVisible, setModalVisible] = useState(false)
   const [like, setLike] = useState(false)
   const [repeat, setRepeat] = useState(false)
@@ -113,7 +115,7 @@ const PresentPerfectContinuous = () => {
           onPress={() => setModalVisible(!modalVisible)}
           style={S.blockLesson}
         >
-          <Text style={S.firstTitle}>Present Perfect Continuous</Text>
+          <Text style={S.firstTitle}>Present Continuous</Text>
         </TouchableOpacity>
         <View style={S.like}>
           <TouchableOpacity onPress={() => setLike(!like)}>
@@ -139,4 +141,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default PresentPerfectContinuous
+export default PresentContinuous

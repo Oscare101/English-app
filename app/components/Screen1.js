@@ -7,6 +7,11 @@ import S from '../lessons/S'
 import Header from './Header'
 import Page from './Page'
 import color from './color'
+import PastSimple from '../lessons/PastSimple'
+import PastContinuous from '../lessons/PastContinuous'
+import PresentContinuous from '../lessons/PresentContinuous'
+import PresentSimple from '../lessons/PresentSimple'
+
 const { width } = Dimensions.get('screen')
 const Screen1 = () => {
   return (
@@ -15,6 +20,12 @@ const Screen1 = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={S.blockList}>
           <Page title="times" />
+          <PastSimple />
+          <PastContinuous />
+
+          <PresentContinuous />
+          <PresentSimple />
+
           <PresentPerfect />
           <PresentPerfectContinuous />
 
