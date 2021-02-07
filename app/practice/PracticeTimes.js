@@ -11,18 +11,20 @@ import {
 import { Ionicons } from '@expo/vector-icons'
 import S from '../lessons/S'
 import color from '../components/color'
+import Test from './Test'
 
-let inputText = ''
-let inputTarget = 'two'
+// let inputText = ''
+// let inputTarget = 'seen'
 
-const Submit = () => {
-  console.log(inputText)
-  if (inputText === inputTarget) {
-    console.log('yes')
-  } else {
-    console.log('no')
-  }
-}
+// const Submit = () => {
+//   console.log(inputText)
+//   if (inputText === inputTarget) {
+//     console.log('yes')
+//   } else {
+//     console.log('no')
+//   }
+// }
+
 const Lesson = () => {
   return (
     <View style={[S.lesson, S.colorBg]}>
@@ -31,14 +33,18 @@ const Lesson = () => {
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
         <View style={{ padding: 10 }}>
-          <Text>Enter {inputTarget}</Text>
-          <View style={styles.inputBlock}>
+          <Test />
+          {/* <View style={styles.inputBlock}>
+            <Text>I vahe never</Text>
             <TextInput
               style={styles.input}
               autoCorrect={false}
+              autoCapitalize="none"
               onChangeText={(text) => (inputText = text)}
               onSubmitEditing={Submit}
             />
+            <Text>(to see) this later </Text>
+
             <TouchableOpacity onPress={Submit}>
               <Ionicons
                 name="checkbox"
@@ -46,13 +52,12 @@ const Lesson = () => {
                 color={color.headerLessonColor}
               />
             </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
       </ScrollView>
     </View>
   )
 }
-
 const PracticeTimes = () => {
   const [modalVisible, setModalVisible] = useState(false)
   const [like, setLike] = useState(false)
@@ -110,15 +115,24 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   input: {
-    borderWidth: 1,
-    borderColor: 'black',
-    width: '80%',
+    borderWidth: 2,
+    borderColor: color.headerLessonColor,
+    borderRadius: 5,
+    width: 80,
     padding: 5,
+    margin: 5,
   },
   inputBlock: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  out: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'green',
+    margin: 5,
+    borderRadius: 5,
   },
 })
 
