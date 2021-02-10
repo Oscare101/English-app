@@ -24,8 +24,8 @@ const Screen1 = () => {
           <PastSimple />
           <PastContinuous />
 
-          <PresentContinuous />
           <PresentSimple />
+          <PresentContinuous />
 
           <PresentPerfect />
           <PresentPerfectContinuous />

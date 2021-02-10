@@ -9,39 +9,32 @@ import {
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import S from './S'
+import color from '../components/color'
 
 const PrepositionTo = {
   Belong: 'That bag belong to me',
-  'Look forward':
-    'I am looking forward to my holliday looking forward to my holliday',
+  'Look forward': 'I am looking forward to my holliday',
   Prefer: 'I prefer taking the train to flying',
   Rude: "Don't be rude to him",
+  Kind: 'They were very kind to me',
+  Close: 'Very close to where we passed',
+  Married: "You're married to someone?",
+  Refer: 'That must refer to the creatures we saw',
+  Respond: 'Computer should respond to keyboard input',
+  Expect: "They can't actually expect to win",
+  Attend: 'I shall attend to the matter, sir',
+  Similar: 'Our situation is similar to theirs',
+  Opposed: 'They were therefore opposed to the proposal',
+  According: 'And according to this report filed two days ago...',
+  Attitude: 'You know, my attitude to money is...',
 }
-const PrepositionFor = {}
-const PrepositionIn = {}
-const PrepositionAt = {}
-const PrepositionWith = {}
-const PrepositionAbout = {}
-const PrepositionOn = {}
-const PrepositionOf = {}
+const PrepositionFor = {
+  Apologize: 'He appologized for being late',
+  Pay: "I'll pay for it",
+}
 
-const ReturnRules = (name, title) => {
-  {
-    return Object.keys(name.name).map((list) => (
-      <View
-        style={{
-          flexDirection: 'column',
-        }}
-      >
-        <Text key={list} style={[S.text, { fontSize: 22 }]}>
-          {list}:
-        </Text>
-        <Text key={name.name[list]} style={{ fontSize: 14, color: 'grey' }}>
-          {name.name[list]}
-        </Text>
-      </View>
-    ))
-  }
+const Hint = (props) => {
+  return <Text style={[S.text, styles.textHint]}>{props.t}</Text>
 }
 
 const Lesson = () => {
@@ -52,45 +45,19 @@ const Lesson = () => {
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
         <View>
-          <Text style={S.h2}>To:</Text>
-          <ReturnRules name={PrepositionTo} title="To" />
-          <Text style={S.h2}>For:</Text>
-          <ReturnRules name={PrepositionFor} title="For" />
-          <Text style={S.h2}>In:</Text>
-          <ReturnRules name={PrepositionIn} title="In" />
-          <Text style={S.h2}>At:</Text>
-          <ReturnRules name={PrepositionAt} title="At" />
-          <Text style={S.h2}>With:</Text>
-          <ReturnRules name={PrepositionWith} title="With" />
-          <Text style={S.h2}>About:</Text>
-          <ReturnRules name={PrepositionAbout} title="About" />
-          <Text style={S.h2}>On:</Text>
-          <ReturnRules name={PrepositionOn} title="On" />
-          <Text style={S.h2}>Of:</Text>
-          <ReturnRules name={PrepositionOf} title="Of" />
-        </View>
-        {/* <View style={S.h}>
-          <Text style={S.ht}>
-            The present perfect continuous is used with the following time
-            expression: {'\n'}
-            <Text style={S.i}>
-              for, since, already,yet, always, just, ever, never, so far, today,
-              this week, how long, lately, recently, still (in negations).
+          <View style={styles.title}>
+            <Text style={S.h2}>To</Text>
+          </View>
+          <View style={styles.block}>
+            <Text style={S.text}>
+              That bag <Text style={{ color: 'blue' }}>belong to </Text>
+              me
             </Text>
-          </Text>
+            <Text style={S.text}>
+              I am <Hint t="looking forward to" /> my holliday
+            </Text>
+          </View>
         </View>
-        <Text style={S.h2}>We use the present perfect continuous:</Text>
-        <Text style={S.text}>
-          &bull; to put emphasis on the duration of an action which started in
-          the past and continues up to the present
-        </Text>
-        <View style={S.c}>
-          <Text style={S.ct}>
-            Sam <Text style={S.b}>has been talking</Text> the phone{' '}
-            <Text style={S.b}>for</Text> half an hour.{'\n'}(He began talking o
-            the phone half an hour ago and he is still talking).
-          </Text>
-        </View> */}
 
         <View style={{ padding: 10 }}></View>
       </ScrollView>
@@ -146,13 +113,32 @@ const Prepositions = () => {
 }
 
 const styles = StyleSheet.create({
-  block: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: 'black',
+  title: {
     borderRadius: 10,
-    borderBottomWidth: 2,
-    padding: 20,
+    marginBottom: 10,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: color.examplesTitle,
+  },
+  block: {
+    borderRadius: 10,
+    marginBottom: 10,
+    padding: 10,
+    backgroundColor: color.examplesText,
+  },
+  hint: {
+    backgroundColor: color.exampleHint,
+    borderRadius: 7,
+    alignSelf: 'flex-end',
+    borderRadius: 10,
+    overflow: 'hidden',
+  },
+  textHint: {
+    textShadowColor: 'black',
+    textShadowOffset: { width: 2, height: 0 },
+    textShadowRadius: 10,
+    color: 'white',
   },
 })
 
