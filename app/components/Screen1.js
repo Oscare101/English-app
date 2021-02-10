@@ -11,6 +11,7 @@ import PastSimple from '../lessons/PastSimple'
 import PastContinuous from '../lessons/PastContinuous'
 import PresentContinuous from '../lessons/PresentContinuous'
 import PresentSimple from '../lessons/PresentSimple'
+import Prepositions from '../lessons/Prepositions'
 
 const { width } = Dimensions.get('screen')
 const Screen1 = () => {
@@ -30,6 +31,7 @@ const Screen1 = () => {
           <PresentPerfectContinuous />
 
           <Page title="cheat sheets" />
+          <Prepositions />
           <Very />
         </View>
       </ScrollView>
