@@ -16,41 +16,50 @@ const Lesson = () => {
         <Text style={S.headerTitle}>Present Simple</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
-        <Text style={S.h3}>present pariciple</Text>
+        <Text style={S.h3}>V</Text>
         <View style={S.h}>
           <Text style={S.ht}>
-            The present simple is used with the following time expression:{' '}
-            {'\n'}
-            <Text style={S.i}>etc.</Text>
+            The present simple is used with the following time expression:
+            <Text style={S.i}>
+              usually, often, always, every day, in this morning, at night, at
+              the weekend, on monday etc.
+            </Text>
           </Text>
         </View>
 
         <Text style={S.h2}>We use the present Simple:</Text>
-        <Text style={S.text}>&bull; for</Text>
+        <Text style={S.text}>
+          &bull; for permanent states, repeated actions and daily routines
+        </Text>
         <View style={S.c}>
           <Text style={S.ct}>
-            He <Text style={S.b}>is giving</Text> the baby beth at the moment
+            He <Text style={S.b}>works</Text> in a bank He{' '}
+            <Text style={S.b}>takes</Text> the train to work every morning
           </Text>
         </View>
-        <Text style={S.text}>&bull; for</Text>
+        <Text style={S.text}>&bull; for general truths and laws of nature</Text>
         <View style={S.c}>
           <Text style={S.ct}>
-            He <Text style={S.b}>was walking</Text> down the street when he
-            <Text style={S.b}>ran into</Text> an old friend
+            The sun <Text style={S.b}>sets</Text> in the west
           </Text>
         </View>
-        <Text style={S.text}>&bull; for</Text>
+        <Text style={S.text}>&bull; for timetable and programmes</Text>
         <View style={S.c}>
           <Text style={S.ct}>
-            She <Text style={S.b}>was talking</Text> on her mobile phone while
-            she <Text style={S.b}>was driving</Text> to work.
+            The plane from Brussels <Text style={S.b}>arrives</Text> at 8:30
           </Text>
         </View>
-        <Text style={S.text}>&bull; to</Text>
+        <Text style={S.text}>
+          &bull; for sports commentaries, reviews and narration
+        </Text>
         <View style={S.c}>
           <Text style={S.ct}>
-            The birds <Text style={S.b}>were singing</Text> and the leaves{' '}
-            <Text style={S.b}>were rustling</Text> in the breeze ...
+            Peterson <Text style={S.b}>overtakes</Text> Williams and
+            <Text style={S.b}> wins</Text> the race (sport commentary){'\n'}Mike
+            Dalton <Text style={S.b}>plays</Text>plays the part of Macbeth
+            (review){'\n'}
+            Then the prince <Text style={S.b}>gets</Text> on his horse and
+            quickly <Text style={S.b}>rides</Text> away (narration)
           </Text>
         </View>
         <View style={{ padding: 10 }}></View>

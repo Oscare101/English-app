@@ -11,9 +11,7 @@ const color = {
   hintText: '#0075A4',
   attentionBlock: '#FFF7A0',
   attentionText: '#A7770D',
-  examplesTitle: '#FFBB8F', //prepositions
-  examplesText: '#B0E1FF', //prepositions
-  exampleHint: '#8DD1E5', //prepositions
+  examplesTitle: '#FFCAA7', //prepositions
 }
 
 export default color
