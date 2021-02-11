@@ -38,7 +38,7 @@ const listAdj = {
 const VeryList = () => {
   {
     return Object.keys(listAdj).map((list) => (
-      <Text key={list} style={[S.text, { fontSize: 22 }]}>
+      <Text key={list} style={[S.ct, { fontSize: 22 }]}>
         {list} &rarr; {listAdj[list]}
       </Text>
     ))
@@ -52,15 +52,19 @@ const Lesson = () => {
         <Text style={S.headerTitle}>Strong adjectives</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
-        <Text style={S.text}>
-          In English, adjectives are divided into{' '}
-          <Text style={S.i}>base adjectives</Text> and{' '}
-          <Text style={S.i}>strong </Text>
-          (extreme) adjectives. The first ones are neutral words, the second
-          ones have a strong emotional connotation.
-        </Text>
+        <View style={S.h}>
+          <Text style={S.ht}>
+            In English, adjectives are divided into{' '}
+            <Text style={S.i}>base adjectives</Text> and{' '}
+            <Text style={S.i}>strong </Text>
+            (extreme) adjectives. The first ones are neutral words, the second
+            ones have a strong emotional connotation.
+          </Text>
+        </View>
+        <View style={S.c}>
+          <VeryList />
+        </View>
 
-        <VeryList />
         {/* <View
           style={{
             flexDirection: 'row',
