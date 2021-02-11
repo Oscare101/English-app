@@ -9,7 +9,8 @@ import {
   ScrollView,
   Share,
 } from 'react-native'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
+
 import S from '../lessons/S'
 
 const onShare = async () => {
@@ -50,7 +51,7 @@ const Lesson = () => {
               Linking.openURL('mailto:kirillfedortsev2000@gmail.com')
             }
           >
-            <Ionicons name="mail-outline" size={40} />
+            <Ionicons name="mail-outline" size={40} color="black" />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() =>
@@ -59,17 +60,22 @@ const Lesson = () => {
               )
             }
           >
-            <Ionicons name="logo-instagram" size={40} />
+            <Ionicons name="logo-instagram" size={40} color="black" />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => Linking.openURL('https://github.com/Oscare101')}
           >
-            <Ionicons name="logo-github" size={40} />
+            <Ionicons name="logo-github" size={40} color="black" />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => Linking.openURL('https://t.me/funny_like_panda')}
           >
-            <Ionicons name="paper-plane-outline" size={40} />
+            <FontAwesome5 name="telegram-plane" size={40} color="black" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => Linking.openURL('https://discord.gg/zFHg8BGn')}
+          >
+            <FontAwesome5 name="discord" size={40} color="black" />
           </TouchableOpacity>
         </View>
         <View>

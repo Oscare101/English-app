@@ -180,6 +180,33 @@ const S = StyleSheet.create({
   settings: {
     width: width * 0.97,
   },
+  titleOrange: {
+    borderRadius: 10,
+    marginBottom: 10,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: color.examplesTitle,
+  },
+  hint: {
+    backgroundColor: color.exampleHint,
+    borderRadius: 7,
+    alignSelf: 'flex-end',
+    borderRadius: 10,
+    overflow: 'hidden',
+  },
+  textHint: {
+    textShadowColor: '#B9EA00',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 10,
+    color: '#489C00',
+  },
+  blockWithGreen: {
+    borderRadius: 10,
+    marginBottom: 10,
+    padding: 10,
+    backgroundColor: color.hintBlock,
+  },
 })
 
 export default S
