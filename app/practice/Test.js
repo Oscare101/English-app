@@ -14,30 +14,53 @@ import color from '../components/color'
 
 const Test = () => {
   const [disableTest, setDisableTest] = useState(false)
+  const [test, setTest] = useState(false)
 
+  let colorIcon
   let a = '1'
   let b = '2'
   let c = '3'
   let d = '4'
   let answer = '2'
   let choice
+
   const Choise = () => {
-    // setDisableTest(!disableTest)
+    setDisableTest(true)
     if (choice === answer) {
-      console.log('yes')
+      setTest(true)
     } else {
-      console.log('no')
+      setTest(false)
     }
+  }
+
+  let colorTest
+
+  if (disableTest) {
+    colorTest = 'grey'
+  } else {
+    colorTest = color.headerLessonColor
+  }
+
+  if (test) {
+    colorIcon = 'green'
+  } else {
+    colorIcon = 'red'
   }
 
   return (
     <View>
+      <Text>answer is 2</Text>
       <TouchableOpacity
         onPress={() => {
           choice = a
           Choise(choice)
         }}
-        style={styles.input}
+        style={[
+          styles.input,
+          {
+            borderColor: colorTest,
+          },
+        ]}
         disabled={disableTest}
       >
         <Text>{a}</Text>
@@ -48,7 +71,12 @@ const Test = () => {
           choice = b
           Choise(choice)
         }}
-        style={styles.input}
+        style={[
+          styles.input,
+          {
+            borderColor: colorTest,
+          },
+        ]}
       >
         <Text>{b}</Text>
       </TouchableOpacity>
@@ -58,7 +86,12 @@ const Test = () => {
           choice = c
           Choise(choice)
         }}
-        style={styles.input}
+        style={[
+          styles.input,
+          {
+            borderColor: colorTest,
+          },
+        ]}
       >
         <Text>{c}</Text>
       </TouchableOpacity>
@@ -68,9 +101,23 @@ const Test = () => {
           choice = d
           Choise(choice)
         }}
-        style={styles.input}
+        style={[
+          styles.input,
+          {
+            borderColor: colorTest,
+          },
+        ]}
       >
         <Text>{d}</Text>
+      </TouchableOpacity>
+      <Ionicons name="rocket" color={colorIcon} size={60} />
+      <TouchableOpacity
+        onPress={() => {
+          setDisableTest(false)
+        }}
+        style={styles.input}
+      >
+        <Text>repeat</Text>
       </TouchableOpacity>
     </View>
   )
@@ -87,7 +134,6 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 2,
-    borderColor: color.headerLessonColor,
     borderRadius: 5,
     width: 80,
     padding: 5,
