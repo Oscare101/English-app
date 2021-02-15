@@ -36,7 +36,7 @@ const TabBar = ({ state, navigation }) => {
 const styles = StyleSheet.create({
   wrapper: {
     position: 'absolute',
-    bottom: 10,
+    bottom: 20,
     width,
     alignItems: 'center',
     justifyContent: 'center',

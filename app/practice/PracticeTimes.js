@@ -33,7 +33,14 @@ const Lesson = () => {
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
         <View style={{ padding: 10 }}>
-          <Test />
+          <Test
+            title="Oh no! We're late! The film _______"
+            a="start"
+            b="has already started"
+            c="was started"
+            d="is starting"
+            A="has already started"
+          />
           {/* <View style={styles.inputBlock}>
             <Text>I vahe never</Text>
             <TextInput

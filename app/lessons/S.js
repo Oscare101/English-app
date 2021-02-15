@@ -49,7 +49,7 @@ const S = StyleSheet.create({
     textAlign: 'center',
   },
   blockList: {
-    paddingBottom: 65,
+    paddingBottom: 80,
     flex: 1,
     width,
     justifyContent: 'center',
@@ -206,6 +206,9 @@ const S = StyleSheet.create({
     marginBottom: 10,
     padding: 10,
     backgroundColor: color.hintBlock,
+  },
+  paddingBottomLesson: {
+    paddingBottom: 20,
   },
 })
 

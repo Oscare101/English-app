@@ -12,16 +12,12 @@ import { Ionicons } from '@expo/vector-icons'
 import S from '../lessons/S'
 import color from '../components/color'
 
-const Test = () => {
+const Test = (props) => {
   const [disableTest, setDisableTest] = useState(false)
   const [test, setTest] = useState(false)
 
   let colorIcon
-  let a = "hasn't started yet"
-  let b = 'has already started'
-  let c = 'is starting'
-  let d = 'was started'
-  let answer = 'has already started'
+  let answer = props.A
   let choice
 
   const Choise = () => {
@@ -47,12 +43,40 @@ const Test = () => {
     colorIcon = 'red'
   }
 
+  const Hint = () => {
+    if (test) {
+      return (
+        <View style={S.c}>
+          <Text style={S.ct}>
+            We use present perfect when the action has recently started..
+          </Text>
+        </View>
+      )
+    } else {
+      return (
+        <View style={S.w}>
+          <Text style={S.wt}>
+            We use present perfect when the action has recently started..
+          </Text>
+        </View>
+      )
+    }
+  }
+
+  const Return = () => {
+    if (disableTest) {
+      return <Hint />
+    } else {
+      return <Text style={S.ct}>choose one answer</Text>
+    }
+  }
+
   return (
     <View>
-      <Text>Oh no! We're late! The film ______</Text>
+      <Text>{props.title}</Text>
       <TouchableOpacity
         onPress={() => {
-          choice = a
+          choice = props.a
           Choise(choice)
         }}
         style={[
@@ -63,12 +87,12 @@ const Test = () => {
         ]}
         disabled={disableTest}
       >
-        <Text>{a}</Text>
+        <Text>{props.a}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         disabled={disableTest}
         onPress={() => {
-          choice = b
+          choice = props.b
           Choise(choice)
         }}
         style={[
@@ -78,12 +102,12 @@ const Test = () => {
           },
         ]}
       >
-        <Text>{b}</Text>
+        <Text>{props.b}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         disabled={disableTest}
         onPress={() => {
-          choice = c
+          choice = props.c
           Choise(choice)
         }}
         style={[
@@ -93,12 +117,12 @@ const Test = () => {
           },
         ]}
       >
-        <Text>{c}</Text>
+        <Text>{props.c}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         disabled={disableTest}
         onPress={() => {
-          choice = d
+          choice = props.d
           Choise(choice)
         }}
         style={[
@@ -108,9 +132,9 @@ const Test = () => {
           },
         ]}
       >
-        <Text>{d}</Text>
+        <Text>{props.d}</Text>
       </TouchableOpacity>
-      <Ionicons name="rocket" color={colorIcon} size={60} />
+      <Return />
       <TouchableOpacity
         onPress={() => {
           setDisableTest(false)

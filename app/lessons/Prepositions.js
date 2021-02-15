@@ -18,7 +18,7 @@ const Lesson = () => {
         <Text style={S.headerTitle}>Dependent Prepositions</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
-        <View>
+        <View style={S.paddingBottomLesson}>
           <View style={S.titleOrange}>
             <Text style={S.h2}>Dependence</Text>
           </View>
