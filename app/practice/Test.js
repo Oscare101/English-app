@@ -17,11 +17,11 @@ const Test = () => {
   const [test, setTest] = useState(false)
 
   let colorIcon
-  let a = '1'
-  let b = '2'
-  let c = '3'
-  let d = '4'
-  let answer = '2'
+  let a = "hasn't started yet"
+  let b = 'has already started'
+  let c = 'is starting'
+  let d = 'was started'
+  let answer = 'has already started'
   let choice
 
   const Choise = () => {
@@ -49,7 +49,7 @@ const Test = () => {
 
   return (
     <View>
-      <Text>answer is 2</Text>
+      <Text>Oh no! We're late! The film ______</Text>
       <TouchableOpacity
         onPress={() => {
           choice = a
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 2,
     borderRadius: 5,
-    width: 80,
+    alignItems: 'center',
     padding: 5,
     margin: 5,
   },
