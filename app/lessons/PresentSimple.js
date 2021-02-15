@@ -16,7 +16,7 @@ const Lesson = () => {
         <Text style={S.headerTitle}>Present Simple</Text>
       </View>
       <ScrollView style={S.view} showsVerticalScrollIndicator={false}>
-        <Text style={S.h3}>V</Text>
+        <Text style={S.h3}>Present form</Text>
         <View style={S.h}>
           <Text style={S.ht}>
             The present simple is used with the following time expression:
